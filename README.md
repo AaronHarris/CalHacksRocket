@@ -8,7 +8,7 @@ In this quick lab we will walk through creating a simple Node.js website with a 
 After this exercise you will learn:
 
 - How to create a route in [Node.js]()
-- Calling a route from your front-end with [jquery]()
+- Calling a route from your front-end
 - Making a [REST API]() call to trigger a rocket launch
 
 # Introduction
