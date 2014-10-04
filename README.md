@@ -84,6 +84,36 @@ And your app.js should have been generated with a couple routes:
 
 ![](ScreenShots/ss12.png)
 
+# Auto-complete Like a Bauss
+
+The **Visual Studio Online IDE** understands **[typescript](http://typescriptlang.org)** which helps bring rich autocomplete functionality right in your browser. Its easy to do this, just install the **[typescript defintion manager](http://npmjs.org/tsd)** and install the type defintions for node and express:
+
+```bash
+#install typescript definition manager
+npm install tsd -g
+
+tsd query node --action install
+tsd query express --action install
+
+```
+
+After this you'll notice that you have **typings** folder which contains definitions for the default node.js modules as well as express:
+
+![](ScreenShots/ss20.png)
+
+Now all you need do is add the following **reference** comments to your javascript and you'll get instant autocomplete for the express and node.js libraries.
+
+```typescript
+/// <reference path="./typings/node/node.d.ts"/>
+/// <reference path="./typings/express/express.d.ts"/>
+```
+
+For example you get all the overloads for the **app.use**:
+
+![](ScreenShots/ss21.png)
+
+# Launching the Rocket
+
 We need to make a REST api call to trigger the rocket. In order to do this, we'll use the **[unirest](http://npmjs.org/unirest)** library. Execute the following command to install it:
 
 ```batch
